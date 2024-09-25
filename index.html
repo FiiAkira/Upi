@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> 
+                <img src="Gambar/logo SI.png" alt="logo SI"> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#beranda"><i class="fas fa-home"></i> Beranda</a></li >
+                    <li><a href="#struktur"><i class="fas fa-search"></i> Tentang</a></li>
+                    <li><a href="#keunggulan"><i class="fas fa-chart-bar"></i> Keunggulan</a></li>
+                    <li><a href="#prospek"><i class="fas fa-chart-bar"></i> Prospek</a>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button class="search"><i class="fas fa-search"></i> Search</button>
+                <button class="id"><i class="fas fa-user"></i> ID <i class="fas fa-chevron-down"></i></button>
+                <button class="masuk">Masuk</button>
+                <button class="daftar">Daftar</button> 
+            </div>
+        </div>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+         <div class="carousel-item">
+            <h3>Proker HMJ Sistem Informasi SMA Kurik</h3>
+          <img alt="Slide 1" width="800" height="400" src="Gambar/Proker Kurik.JPG"/>
+         </div>
+         <div class="carousel-item">
+            <h3>Proker HMJ Sistem Informasi Panti Asuhan Kartini</h3>
+          <img alt="Slide 2" height="400" src="Gambar/Proker Jalinan Kasih.jpg" width="800"/>
+         </div>
+         <div class="carousel-item">
+            <h3>Proker HMJ Sistem Informasi SMA Entrepreneurship Chevalier</h3>
+          <img alt="Slide 3" src="Gambar/Proker Anasai.jpg"/>
+         </div>
+        </div>
+        <div class="carousel-controls">
+         <button class="carousel-control prev" onclick="prevSlide()">
+          ❮
+         </button>
+         <button class="carousel-control next" onclick="nextSlide()">
+          ❯
+         </button>
+        </div>
+       </div>
+       <script>
+        let currentIndex = 0;
+     
+             function showSlide(index) {
+                 const slides = document.querySelectorAll('.carousel-item');
+                 const totalSlides = slides.length;
+     
+                 if (index >= totalSlides) {
+                     currentIndex = 0;
+                 } else if (index < 0) {
+                     currentIndex = totalSlides - 1;
+                 } else {
+                     currentIndex = index;
+                 }
+     
+                 const offset = -currentIndex * 100;
+                 document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+             }
+     
+             function nextSlide() {
+                 showSlide(currentIndex + 1);
+             }
+     
+             function prevSlide() {
+                 showSlide(currentIndex - 1);
+             }
+     
+             // Auto slide every 3 seconds
+             setInterval(nextSlide, 3000);
+       </script>
+    
+    <div class="container">
+        <div class="section">
+            <section id="struktur"></section>
+         <div class="section-title">
+         <P>
+          Sekilas Tentang
+          <span class="highlight">
+           Prodi
+          </span>
+         </div>
+         <div class="section-subtitle">
+          Sekilas tentang dan profil prodi S1 Sistem Informasi
+         </div>
+         <div class="image-container">
+          <img alt="Student working on a laptop" height="400" src="Gambar/Jaya le.jpg" width="600"/>
+         </div>
+         <div class="section-content">
+            Program studi S1 Sistem Informasi Universitas Musamus adalah program studi Sistem Informasi pertama di papua selatan yang terakreditasi B. Bidang keilmuan Sistem Informasi menjembatani kesenjangan antara komponen teknis (teknologi informasi dan komunikasi) dan komponen non teknis (bisnis dan manajemen). Dalam kurikulumnya, program studi S1 Sistem Informasi menekankan pemanfaatan teknologi informasi dan komunikasi untuk menyelesaikan permasalahan yang dihadapi oleh organisasi, serta mengoptimalkan peran strategis teknologi informasi dalam pencapaian tujuan organisasi. Dengan demikian, lulusan program studi S1 Sistem Informasi diharapkan memiliki kompetensi yang memadai dalam mendukung transformasi digital organisasi.</div>
+         </div>
+        </div>
+        <div class="section">
+            <section id="keunggulan"></section>
+         <div class="section-title">
+          Keunggulan
+          <span class="highlight">
+           Prodi
+          </span>
+         </div>
+         <div class="image-container">
+          <img alt="Person working on a computer" height="400" src="Gambar/lab si.jpg" width="600"/>
+         </div>
+         <div class="section-content">
+             Penggunaan sistem informasi menjadi hal yang sangat penting dalam menghadapi persaingan bisnis yang sangat ketat mengingat sistem informasi sangat membantu sebuah organisasi dalam mengambil keputusan yang tepat berdasarkan data dan informasi yang relevan. Melihat pentingnya Sistem Informasi, kebutuhan pekerja yang memahami dan terampil di bidang sistem informasi saat ini sangatlah tinggi dan akan terus meningkat dalam beberapa tahun ke depan. Program studi S1 Sistem Informasi mampu melahirkan talenta digital yang cakap dalam menganalisis permasalahan dan menyajikan solusi berbasis digital.
+         </div>
+        </div>
+        <div class="section">
+            <section id="prospek"></section>
+         <div class="section-title">
+          Prospek Karir
+          <span class="highlight">
+           Prodi
+          </span>
+         </div>
+         <div class="image-container">
+          <img alt="Group of students" height="400" src="Gambar/Start up cowo nam dosan.jpg" width="300"/>
+          <img alt="Student holding a tablet" height="400" src="Gambar/Start Up cewe.jpg" width="300"/>
+         </div>
+         <ul class="prospects-list">
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Application analyst
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Cyber security analyst
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Data analyst
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Data scientist
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Database administrator
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Information systems manager
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           IT consultant
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           IT technical support officer
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Software engineer
+          </li>
+          <li>
+           <i class="fas fa-check-circle">
+           </i>
+           Systems analyst
+        </p>
+          </li>
+         </ul>
+        </div>
+        <div class="social-media">
+         <div class="social-media-title">
+          Sosial Media
+         </div>
+         <div class="social-media-subtitle">
+          Jadilah bagian dari perjalanan kami menuju inovasi dan keunggulan
+         </div>
+         <div class="social-media-icons">
+          <i class="fab fa-instagram">
+          </i>
+          <i class="fab fa-youtube">
+          </i>
+         </div>
+        </div>
+        <div class="image-container">
+         <img alt="Group of students in red blazers" height="400" src="Gambar/IG HIMASI.png" width="2200"/>
+        </div>
+       </div>
+    
+ <div class="footer">
+  <div>
+   <img alt="Universitas Indonesia logo" height="100" src="Gambar/logo SI.png" width="100"/>
+   <p>
+     INSYM
+   </p>
+  </div>
+  <div>
+   <h3>
+    Kampus Papua Selatan
+   </h3>
+   <p>
+    Universites Musamus Merauke
+   </p>
+   <p>
+    Merauke 99615
+   </p>
+   <p>
+    Indonesia
+   </p>
+   <p>
+    <i class="fas fa-envelope">
+    </i>
+    https://unmus.ac.id / https://fatek.unmus.ac.id
+   </p>
+   <p>
+    <i class="fas fa-phone">
+    </i>
+    021-1500002 / +62 821 90960318
+   </p>
+   <p>
+    <i class="fab fa-whatsapp">
+    </i>
+    WhastApp
+   </p>
+   <div class="social-icons">
+    <a href="#">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-youtube">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+   </div>
+  </div>
+  <div>
+   <p>
+    Fasilitas
+   </p>
+   <p>
+    Mitra
+   </p>
+   <p>
+    Karir
+   </p>
+  </div>
+ </div>
+ <div class="footer-bottom">
+  <p>
+   2024 Hak Cipta, Universitas Musamus Merauke
+  </p>
+ </div>
+</html>
